@@ -2,16 +2,21 @@
 2. clear terminal with cmd+k
 3. run rails server webrick - $ rails server
 4. initialize git repository - git init
-5. modify .gitignore 
-	*.swp
-	*~
-	.project
-	.DS_Store
-	.idea
-6. git add .
-7. git commit -am "Initial Commit"
-8. git remote add origin git@github.com:blurden/((repo name)))).git
-9. git push -u origin master
+	modify .gitignore 
+		*.swp
+		*~
+		.project
+		.DS_Store
+		.idea
+	git add .
+	git commit -am "Initial Commit"
+	git remote add origin git@github.com:blurden/((repo name)))).git
+	git push -u origin master
+	modify readme to describe your project
+	modify production db to postgres in gemfile
+	bundle install --without production (for local)
+	heroku create
+	git push heroku master
 
 
 
