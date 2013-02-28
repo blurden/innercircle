@@ -1,7 +1,8 @@
-1. rails new ((appname))
-2. clear terminal with cmd+k
-3. run rails server webrick - $ rails server
-4. initialize git repository - git init
+	==== start a new app setup git and heroku
+	rails new ((appname))
+	clear terminal with cmd+k
+	run rails server webrick - $ rails server
+	initialize git repository - git init
 	modify .gitignore 
 		*.swp
 		*~
@@ -14,10 +15,34 @@
 	git push -u origin master
 	modify readme to describe your project
 	modify production db to postgres in gemfile
-	bundle install --without production (for local)
-	heroku create
+	bundle install --without production (for local - this is remembered)
+	git add .
+	git commit
+	git push
+	heroku create (first time only to create connection)
 	git push heroku master
-
+	heroku open
+	==== create pages
+	create a controller with an action
+		rails generater controller Pages home ((ControllerName action))
+		* this creates a view in app/pages/actionname.html.erb
+		* it creates a controller in controllers/actionname_controller.rb
+		* it creates a route in config/routes.rb - this is why the domain works localhost:3000/pages/action
+	reassign the root in routes.rb
+		root :to => '((controller))#((action))'
+	remove the public index
+		rm public/index.html 
+	=== create custom pages
+	create route
+		ie. get 'about' => 'pages#about'
+	create action
+		ie def about end
+	create view
+		ie about.html.erb
+	=== finish starter views
+		flush out pages
+		index and about
+		setup application.html.erb to have header and footer helpers
 
 
 git commands
