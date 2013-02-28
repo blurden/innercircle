@@ -1,0 +1,18 @@
+1. rails new ((appname))
+2. clear terminal with cmd+k
+3. run rails server webrick - $ rails server
+4. initialize git repository - git init
+5. modify .gitignore 
+	*.swp
+	*~
+	.project
+	.DS_Store
+	.idea
+6.
+
+
+
+
+git commands
+	git status
+
