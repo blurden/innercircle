@@ -8,11 +8,16 @@
 	.project
 	.DS_Store
 	.idea
-6.
-
+6. git add .
+7. git commit -am "Initial Commit"
+8. git remote add origin git@github.com:blurden/((repo name)))).git
+9. git push -u origin master
 
 
 
 git commands
-	git status
-
+	git status - will list what needs to commit
+	git add . -add all files being tracked
+	git commit -am "Initial Commit - any message here"
+	git remote add origin git@github.com:blurden/((repo name)))).git
+	git push -u origin master
