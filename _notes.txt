@@ -42,7 +42,24 @@
 	=== finish starter views
 		flush out pages
 		index and about
-		setup application.html.erb to have header and footer helpers
+		setup application.html.erb to have header and footer partials
+	=== add bootstrap sass using gem
+		add to gemfile: gem 'bootstrap-sass', '~> 2.3.0.1'
+		run bundle install
+		create a stylesheet 
+			ie app/assets/stylesheets/styles.css.scss
+			insert @import 'bootstrap'; into css
+			restart server
+		=== turn on responsive
+		add @import 'bootstrap-responsive'; to styles.css.scss
+		modify app/assets/javascripts/application.js
+			//= require jquery
+			//= require jquery_ujs
+			//= require bootstrap
+			//= require_tree .
+		add div class="container" to layouts
+		add navigation css to header helper
+		add navbar-fixed-top if needed
 
 
 git commands

@@ -1,0 +1,38 @@
+
+$baseFontFamily: Ubuntu;
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+
+$headingsFontFamily: Raleway;
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+
+$btnPrimaryBackground: purple;
+$navbarBackgroundHighlight: white;
+$navbarBackground: white;
+
+
+@import 'bootstrap';
+
+body {
+	padding-top: 60px;
+	background-color: #272822;
+	color: $grayLight;
+}
+
+@import 'bootstrap-responsive';
+
+.navbar-inner {
+	@include box-shadow(none !important);
+	border: 0;
+}
+
+.hero-unit{
+
+}
+
+.footer {
+	margin-top: 50 px;
+	color: $grayLight;
+	a {
+		color: $gray;
+	}
+}
