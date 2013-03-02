@@ -60,6 +60,21 @@
 		add div class="container" to layouts
 		add navigation css to header helper
 		add navbar-fixed-top if needed
+	=== add users with devise
+		add to gemfile: gem 'devise'
+		bundle install
+		run: rails generate devise:install
+		follow basic insturctions
+		add devise to a model
+			ie rails generate devise User
+			run rake on dev server - rake db:migrate or (bundle exec rake db:migrate)
+		add links where the user can sign up/sign in
+		ie new_user_session_path
+		('rake routes' shows you all the available routes of your app)
+		create log in - log out conditions
+		display alt homepage for logged in
+		create path to user registration edit page
+		run rails generate devise:views
 
 
 git commands

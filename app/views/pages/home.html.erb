@@ -1,9 +1,13 @@
-<div class="hero-unit">
-	<h1>Welcome to InnerCircle</h1>
-	<p>
-	  Relationship Management for those closest to you.
-	</p>
-	<p>
-	  <%= link_to "Sign Up Now!", "#", class: "btn btn-large btn-primary" %>
-	</p>
-</div>
+<% if user_signed_in? %>
+	<%= render 'user_home' %>
+<% else %>
+	<div class="hero-unit">
+		<h1>BaseTouch is</h1>
+		<p>
+		  Relationship Management for Your Inner Circle.
+		</p>
+		<p>
+		  <%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-large btn-primary" %>
+		</p>
+	</div>
+<% end %>
