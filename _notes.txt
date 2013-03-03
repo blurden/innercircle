@@ -75,6 +75,23 @@
 		display alt homepage for logged in
 		create path to user registration edit page
 		run rails generate devise:views
+	=== add simple forms
+		add to gemfile: gem 'simple_form'
+		run bundle install
+		generate integration to bootstrap
+			rails generate simple_form:install --bootstrap
+		simple_form_for(@user, :html => {:class => 'form-horizontal' }) do |form|
+
+	=== add omniauth twitter
+		see railscast
+
+	
+	=== modify the user model ie add name
+		ie rails generate migration AddNameToUsers name:string
+		run rake db:migrate
+		restart server
+		modify model to have the attribute accessible if necessary
+		modify views to have the input where necessary
 
 
 git commands

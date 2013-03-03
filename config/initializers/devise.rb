@@ -215,9 +215,8 @@ Devise.setup do |config|
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', :scope => 'user,public_repo'
   
-  # config.omniauth :twitter, ENV["TWITTER_CONSUMER_KEY"], ENV["TWITTER_CONSUMER_SECRET"]  
-  config.omniauth :google_oauth2, ENV["GOOGLE_OA2_KEY"], ENV["GOOGLE_OA2_SECRET"], :scope => "userinfo.email,userinfo.profile,plus.me",
-             :approval_prompt => "auto" 
+  # config.omniauth :twitter, ENV["TWITTER_CONSUMER_KEY"], ENV["TWITTER_CONSUMER_SECRET"]
+  config.omniauth :google_oauth2, ENV["GOOGLE_OA2_KEY"], ENV["GOOGLE_OA2_SECRET"], :scope => "userinfo.email,userinfo.profile,plus.me", :approval_prompt => "auto" 
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

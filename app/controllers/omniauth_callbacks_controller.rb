@@ -1,5 +1,5 @@
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
-  def twitter
+  def all
     user = User.from_omniauth(request.env["omniauth.auth"])
     if user.persisted?
       flash.notice = "Signed in!"
@@ -9,16 +9,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       redirect_to new_user_registration_url
     end
   end
-
-    def google_oauth2
-    user = User.from_omniauth(request.env["omniauth.auth"])
-    if user.persisted?
-      flash.notice = "Signed in!"
-      sign_in_and_redirect user
-    else
-      session["devise.user_attributes"] = user.attributes
-      redirect_to new_user_registration_url
-    end
-  end
-  #alias_method :twitter, :all
+  # alias_method :twitter, :all
+  alias_method :google_oauth2, :all
 end
