@@ -23,3 +23,6 @@ _notes.txt
 
 # Ignore application configuration
 /config/application.yml
+
+# Ignore paperclip uploads
+/public/system

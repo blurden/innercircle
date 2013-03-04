@@ -1,4 +1,5 @@
 <tr>
+	<td><%= image_tag contact.image(:thumb) %></td>
   <td><%= contact.name.cap_words %></td>
   <td><%= link_to 'Show', contact %></td>
   <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
