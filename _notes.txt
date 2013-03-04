@@ -101,6 +101,13 @@
 		heroku run rake db:migrate
 		heroku open
 
+	=== adding functionality with scaffolding
+		rails gereate scaffold Pins description:string --skip-stylesheets
+			-this creates a controller/model/views
+		create associations
+			rails generate migration AddUserIdToPins user_id:integer:index
+			rake db:migrate
+
 
 git commands
 	git status - will list what needs to commit
