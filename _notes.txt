@@ -94,11 +94,12 @@
 		modify views to have the input where necessary
 	
 	=== heroku databases etc
-		heroku push master
-		heroku open
+		git push heroku master
+		
 		heroku log --tail
+		rake figaro:heroku
 		heroku run rake db:migrate
-
+		heroku open
 
 
 git commands

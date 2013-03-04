@@ -1,0 +1,19 @@
+<h1>Listing Contacts</h1>
+<div class="well">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render @contacts %>
+    </tbody>
+  </table>
+</div>
+<br />
+
+<%= link_to 'New Contact', new_contact_path %>
