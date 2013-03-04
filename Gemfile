@@ -6,6 +6,7 @@ gem 'devise'
 gem 'simple_form'
 # gem 'omniauth-twitter'
 gem 'omniauth-google-oauth2'
+gem 'figaro'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

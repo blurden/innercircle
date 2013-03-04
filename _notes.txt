@@ -92,6 +92,13 @@
 		restart server
 		modify model to have the attribute accessible if necessary
 		modify views to have the input where necessary
+	
+	=== heroku databases etc
+		heroku push master
+		heroku open
+		heroku log --tail
+		heroku run rake db:migrate
+
 
 
 git commands

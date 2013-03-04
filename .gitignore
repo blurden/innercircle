@@ -20,4 +20,6 @@ doc/
 .DS_Store
 .idea
 _notes.txt
-config/initializers/dev_environment.rb
+
+# Ignore application configuration
+/config/application.yml

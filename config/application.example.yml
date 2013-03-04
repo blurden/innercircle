@@ -1,0 +1,4 @@
+ENV['TWITTER_CONSUMER_KEY'] = 'key'
+ENV['TWITTER_CONSUMER_SECRET'] = 'secret'
+ENV['GOOGLE_OA2_KEY'] = 'key'
+ENV['GOOGLE_OA2_SECRET'] = 'secret'
