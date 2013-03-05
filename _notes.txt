@@ -108,6 +108,10 @@
 			rails generate migration AddUserIdToPins user_id:integer:index
 			rake db:migrate
 
+	=== jquery masonry
+		add file to vendor
+		add dependancy to application.js
+		
 
 git commands
 	git status - will list what needs to commit

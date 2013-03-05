@@ -13,6 +13,17 @@ class ContactsController < ApplicationController
     end
   end
 
+  # GET /contacts
+  # GET /contacts.json
+  def radar
+    @contacts = current_user.contacts.all
+
+    respond_to do |format|
+      format.html # radar.html.erb
+      format.json { render json: @contacts }
+    end
+  end
+
   # GET /contacts/1
   # GET /contacts/1.json
   def show

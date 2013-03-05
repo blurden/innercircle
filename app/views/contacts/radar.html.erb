@@ -1,0 +1,16 @@
+<div id="contacts">
+	<% @contacts.each do |contact| %>
+		<div class="box">
+			<%= link_to (image_tag contact.image), contact %>
+			<p class="contact-name">
+				<%= contact.name.cap_words %>
+			</p>
+			<% if current_user == contact.user %>
+				<p>
+					<%= link_to 'Edit', edit_contact_path(contact) %>
+					<%= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' } %>
+				</p>
+			<% end %>
+		</div>
+	<% end %>
+</div>

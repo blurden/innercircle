@@ -1,4 +1,4 @@
-<h1>Listing Contacts</h1>
+<h1>My Inner Circle</h1>
 <div class="well">
   <table class="table table-striped">
     <thead>
@@ -14,7 +14,8 @@
       <%= render @contacts %>
     </tbody>
   </table>
+  <%= link_to 'Add New Contact', new_contact_path, class: "btn" %>
 </div>
 <br />
 
-<%= link_to 'New Contact', new_contact_path %>
+
