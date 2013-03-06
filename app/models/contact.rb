@@ -13,7 +13,8 @@ class Contact < ActiveRecord::Base
 
   has_attached_file :image, 
     :styles => { 
-      :thumb => "100x100" },
+      :thumb => "100x100#",
+      :radar => "200x200#" },
     :convert_options => { :all => '-auto-orient' }
 
   
