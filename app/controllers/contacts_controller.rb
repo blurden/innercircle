@@ -83,14 +83,20 @@ class ContactsController < ApplicationController
     end
   end
 
+  def before_destroy
+    
+  end
+
+
   # DELETE /contacts/1
   # DELETE /contacts/1.json
   def destroy
+    session[:return_to] ||= request.referer
     @contact = current_user.contacts.find(params[:id])
     @contact.destroy
 
     respond_to do |format|
-      format.html { redirect_to contacts_url }
+      format.html { redirect_to session.delete(:return_to) }
       format.json { head :no_content }
     end
   end

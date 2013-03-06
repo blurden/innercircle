@@ -10,6 +10,12 @@ Innercircle::Application.routes.draw do
                      controllers: {omniauth_callbacks: "omniauth_callbacks"}
 
 
+  #if the user is logged in then make stacks#index root "home"
+  authenticated :user do
+    root :to => 'contacts#index'
+  end
+
+  # if user not logged in then make pages#home root "home"
   root :to => 'pages#home'
   #get "pages/home"
   get 'about' => 'pages#about'
