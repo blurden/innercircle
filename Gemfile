@@ -8,6 +8,7 @@ gem 'simple_form'
 gem 'omniauth-google-oauth2'
 gem 'figaro'
 gem "paperclip", "~> 3.0"
+gem 'phony_rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

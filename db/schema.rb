@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130306154356) do
+ActiveRecord::Schema.define(:version => 20130308164550) do
 
   create_table "contacts", :force => true do |t|
     t.string   "name"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20130306154356) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.string   "email"
+    t.string   "phone"
   end
 
   add_index "contacts", ["user_id"], :name => "index_contacts_on_user_id"
