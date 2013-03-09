@@ -3,7 +3,7 @@
 <div id="contacts">
 	<% @contacts.each do |contact| %>
 		<div class="box">
-			<%= link_to (image_tag contact.image(:radar)), contact %>
+			<%= link_to (image_tag contact.file_url(:radar)), contact %>
 			<p class="contact-name">
 				<%= contact.name.cap_words %>
 			</p>

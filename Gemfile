@@ -7,8 +7,10 @@ gem 'simple_form'
 # gem 'omniauth-twitter'
 gem 'omniauth-google-oauth2'
 gem 'figaro'
-gem "paperclip", "~> 3.0"
+#gem "paperclip", "~> 3.0"
 gem 'phony_rails'
+gem "mini_magick"
+gem "carrierwave"
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

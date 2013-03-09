@@ -1,5 +1,5 @@
 <tr>
-	<td><%= link_to (image_tag contact.image(:thumb)), contact %></td>
+	<td><%= link_to (image_tag contact.file_url(:thumb)), contact %></td>
   <td><%= contact.name.cap_words %></td>
   <td><%= mail_to contact.email, contact.email, :encode => "hex", :target => "_blank" %>
   <td><%= contact.phone.phony_formatted!(:format => :international) %></td>
