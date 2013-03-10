@@ -7,8 +7,11 @@
   <%= f.input :name, input_html: { rows: "3" } %>
   <%= f.input :email, input_html: { rows: "3" } %>
   <%= f.input :phone, input_html: { rows: "3" } %>
+  <br />
+  <%= image_tag(@contact.file_url(:thumb)) if @contact.file? %>
   <%= f.input :file, label: "Upload Image" %>
   <%= f.input :remote_file_url, label: "or input url", input_html: { rows: "3" } %>
+  <%= f.hidden_field :file_cache %>
 
   <div class="form-actions">
     <%= f.button :submit, class: "btn btn-primary" %>
