@@ -111,7 +111,34 @@
 	=== jquery masonry
 		add file to vendor
 		add dependancy to application.js
-		
+
+	=== add devise confirmation
+		add :confirmable to the devise model
+		create migration to add tables
+			$  rails g migration add_confirmable_to_devise
+		modify the migration with appropriate columns:
+				class AddConfirmableToDevise < ActiveRecord::Migration
+				  def self.up
+				    add_column :users, :confirmation_token, :string
+				    add_column :users, :confirmed_at,       :datetime
+				    add_column :users, :confirmation_sent_at , :datetime
+				    add_column :users, :unconfirmed_email, :string
+
+				    add_index  :users, :confirmation_token, :unique => true
+				  end
+				  def self.down
+				    remove_index  :users, :confirmation_token
+
+				    remove_column :users, :unconfirmed_email
+				    remove_column :users, :confirmation_sent_at
+				    remove_column :users, :confirmed_at
+				    remove_column :users, :confirmation_token
+				  end
+				end
+		rake db:migrate
+		setup mail catcher
+			http://stackoverflow.com/questions/8186584/how-do-i-set-up-email-confirmation-with-devise
+
 
 git commands
 	git status - will list what needs to commit
